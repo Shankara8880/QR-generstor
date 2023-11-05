@@ -21,7 +21,10 @@ const QrGenerator = () => {
                 <div className='text-center' id='qrcode'>
                     {
                         (!qrError && qRPrint)
-                            ? <img style={{ height: 250, width: 250 }} src={qRPrint} alt="" />
+                            ?<>
+                               <img style={{ height: 250, width: 250 }} src={qRPrint} alt="" />
+                                <p>Scan this to view the results</p>
+                            </> 
                             : <h1 className='text-danger'>{qrError}</h1>
                     }
                 </div>
